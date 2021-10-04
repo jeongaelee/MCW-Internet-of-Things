@@ -31,12 +31,10 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Before the hands-on lab](#before-the-hands-on-lab)
     - [Task 1: Provision a resource group](#task-1-provision-a-resource-group)
     - [Task 2: Setup a lab virtual machine](#task-2-setup-a-lab-virtual-machine)
-    - [Task 3: Provision Azure Databricks](#task-3-provision-azure-databricks)
-    - [Task 4: Create Databricks cluster](#task-4-create-databricks-cluster)
-    - [Task 5: Provision Power BI](#task-5-provision-power-bi)
-    - [Task 6: Connect to your Lab VM](#task-6-connect-to-your-lab-vm)
-    - [Task 7: Download Google Chrome](#task-7-download-google-chrome)
-    - [Task 8: Download Smart Meter Simulator project](#task-8-download-smart-meter-simulator-project)
+    - [Task 3: Provision Power BI](#task-3-provision-power-bi)
+    - [Task 4: Connect to your Lab VM](#task-4-connect-to-your-lab-vm)
+    - [Task 5: Download Google Chrome](#task-5-download-google-chrome)
+    - [Task 6: Download Smart Meter Simulator project](#task-6-download-smart-meter-simulator-project)
 
 <!-- /TOC -->
 
@@ -132,59 +130,7 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 
 7. You can move on to the next task while waiting for the lab VM to provision.
 
-### Task 3: Provision Azure Databricks
-
-In this task, you will create an Azure Databricks workspace.
-
-1. In the [Azure portal](https://portal.azure.com), select **+ Create a resource**, then enter `Azure Databricks` into the **Search the Marketplace** box.
-
-2. Select **Azure Databricks** from the results, and then select **Create**.
-
-   ![Azure Databricks is entered into the Search the Marketplace box, and Azure Databricks is selected in the results.](media/create-resource-azure-databricks.png 'Create Azure Databricks')
-
-3. On the **Create an Azure Databricks workspace** blade, enter the following:
-
-   - **Subscription**: Select the subscription you are using for this hands-on lab.
-
-   - **Resource group**: Choose Use existing and select the **hands-on-lab-SUFFIX** resource group.
-
-   - **Workspace name**: Enter `iot-db-workspace-SUFFIX`.
-
-   - **Region**: Select the region you are using for resources in this hands-on lab.
-
-   - **Pricing tier**: Select **Standard (Apache Spark, Secure with Azure AD)**.
-
-     ![The Create an Azure Databricks workspace form is displayed, with the values specified above entered into the appropriate fields.](media/azure-databricks-create-workspace.png 'Create Azure Databricks workspace')
-
-   - Select **Review + Create**.
-
-   - Select **Create**.
-
-### Task 4: Create Databricks cluster
-
-In this task, you will create an Azure Databricks cluster within the workspace you created previously.
-
-1. Once the deployment of the Databricks workspace is complete, select **Go to resource** on the notification you receive. Alternatively, you can also open the lab resource group, and select the **Azure Databricks Service** resource named **iot-db-workspace-SUFFIX**.
-
-   ![Under Notifications in Azure, a message that the Azure Databricks deployment succeeded is displayed, and the Go to resource button is highlighted.](media/azure-databricks-resource-created.png 'Azure Databricks deployment succeeded')
-
-2. On the **Azure Databricks Service overview** blade, select **Launch Workspace**.
-
-   ![On the Azure Databricks Service blade, the Launch Workspace button is highlighted.](media/azure-databricks-launch-workspace.png 'Launch Azure Databricks Workspace')
-
-3. In the new browser window that opens, select **Clusters** from the left-hand navigation menu, then select **+Create Cluster**.
-
-   ![In the Azure Databricks workspace, Clusters in highlighted in the left-hand navigation menu, and the +Create Cluster button is highlighted.](media/azure-databricks-clusters-create.png 'Create new Databricks cluster')
-
-4. On the **Create Cluster** page, enter `iot-cluster-SUFFIX` for the **Cluster Name**, leave the remaining values to their defaults, and select **Create Cluster**.
-
-   ![On the Create Cluster page, "iot-cluster-SUFFIX" is entered into the Cluster Name field.](media/azure-databricks-create-cluster.png 'Create Azure Databricks cluster')
-
-5. After a few minutes, your cluster will display as running.
-
-   ![The iot-cluster-SUFFIX cluster is displayed under Interactive Clusters, and the state shows running.](media/azure-databricks-interactive-clusters.png 'Databricks Interactive clusters')
-
-### Task 5: Provision Power BI
+### Task 3: Provision Power BI
 
 If you do not already have a Power BI account:
 
@@ -202,7 +148,7 @@ If you do not already have a Power BI account:
 
    > **Note**: You can always return to your Power BI environment by navigating to <https://app.powerbi.com/>.
 
-### Task 6: Connect to your Lab VM
+### Task 4: Connect to your Lab VM
 
 In this task, you will create an RDP connection to your lab virtual machine (VM).
 
@@ -248,7 +194,7 @@ In this task, you will create an RDP connection to your lab virtual machine (VM)
 
 11. Close the **Server Manager**.
 
-### Task 7: Download Google Chrome
+### Task 5: Download Google Chrome
 
 Azure Databricks requires Google Chrome or Firefox. By default, the VM only includes Internet Explorer.
 
@@ -256,7 +202,7 @@ Azure Databricks requires Google Chrome or Firefox. By default, the VM only incl
 
 2. Select **Download Chrome** on the webpage and follow the prompts.
 
-### Task 8: Download Smart Meter Simulator project
+### Task 6: Download Smart Meter Simulator project
 
 Fabrikam has provided a Smart Meter Simulator that they use to simulate device registration, as well as the generation and transmission of telemetry data. They have asked you to use this as the starting point for integrating their smart meters with Azure.
 
